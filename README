@@ -1,0 +1,5 @@
+protocol for restore program state
+
+Clients start with (restore-init!) and can look up state in the
+returned hash table. As they run, they call restore-notify!. The
+server runs processes wrapped in with-restore-server.
