@@ -19,7 +19,7 @@
          (string->number (bytes->string/utf-8 port-no-str)))
        (define-values (from-server to-server) (tcp-connect "127.0.0.1" port-no))
        (write msg to-server)
-       (flush-output)
+       (flush-output to-server)
        (close-output-port to-server)
        (define response (read from-server))
        (close-input-port from-server)
