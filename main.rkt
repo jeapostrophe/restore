@@ -2,8 +2,7 @@
 (require racket/match
          racket/tcp
          racket/contract/base
-         unstable/error
-         unstable/contract)
+         unstable/error)
 
 (define ENV-VAR #"RESTORE")
 
